@@ -1,6 +1,5 @@
 import logo from './logo.svg';
-import './App.scss';
-
+import styles from './App.scss';
 function App() {
   return (
     <div className="global-width">
@@ -8,6 +7,7 @@ function App() {
       <h2>m ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliqu</h2>
       <h3>m ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliqu</h3>
       <h4>m ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliqu</h4>
+      <button className={styles["primary"]}>New Invoice</button>    
     </div>
   );
 }
