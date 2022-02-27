@@ -54,33 +54,83 @@ h3 {
 @media screen and (min-width: 750px) {
     .global-width {
         width: 80%;
-        background-color: blue;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .global-width {
         width: 60%;
-        background-color: orange;
     }
 }
+
 button {
-    border-radius: 1rem;
+    border-radius: 2rem;
     border: none;
-
-}
-
-button.primary {
-    background-color: $lilac-1;
+    padding: 1.2rem 1.7rem;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 800;
+    color: $white;
 
     &:hover {
-        background-color: $lilac-2;
+        cursor: pointer;
+    }
+
+        &.primary {
+            background-color: $lilac-1;
+
+            &:hover {
+                background-color: $lilac-2;
+            }
+        
+        &::before {
+            content: url("../../public/images/icon-plus.svg");
+            background-color: $white;
+            padding: 0.75rem 1.1rem 0.7rem 1.1rem;
+            border-radius: 50%;
+            margin-left: -1rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &.danger {
+        background-color: $red-1;
+
+        &:hover {
+            background-color: $red-2;
+        }
+    }
+
+    &.add-new-item {
+
+    }
+
+    &.new-invoice {
+
     }
 }
 
-button.danger {
-    background-color: $red-1;
+.tag {
+    font-weight: 800;
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 1.2rem;
+
+    &--paid {
+        background-color: rgb(51, 214, 159, .06);
+        color: #33D69F;
+
+        &::before {
+            content: "";
+            height: .8rem;
+            width: .8rem;
+            background-color: #33D69F;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+    }
 }
+
 
 
 
