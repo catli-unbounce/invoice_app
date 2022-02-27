@@ -109,6 +109,13 @@ button {
     }
 }
 
+.vertical-nav {
+    height: 100vh;
+    position: fixed;
+    width: 10rem;
+    background-color: $navy-2;
+}
+
 .tag {
     font-weight: 800;
     border-radius: 6px;
