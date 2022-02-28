@@ -1,6 +1,6 @@
 
 import styles from './App.scss';
-import InvoiceList from './components/InvoiceList';
+import InvoiceList from './components/InvoiceList/InvoiceList';
 import {useState, useEffect} from 'react';
 
 function App() {
