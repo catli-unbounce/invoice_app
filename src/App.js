@@ -1,19 +1,36 @@
 
 import styles from './App.scss';
 import InvoiceList from './components/InvoiceList';
+import {useState, useEffect} from 'react';
 
 function App() {
+  const [data,setData]=useState([]);
+
+  const getData=()=>{
+    fetch('data.json'
+    ,{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }
+    )
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(myJson) {
+        console.log(myJson);
+        setData(myJson)
+      });
+  }
+  useEffect(()=>{
+    getData()
+  },[])
   return (
     <>
       <div className="vertical-nav"></div>
       <div className="global-width">
-        <InvoiceList></InvoiceList>
-        <img src="/images/icon-check.svg" alt="image" />
-        <h1>m ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliqu</h1>
-        <h2>m ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliqu</h2>
-        <h3>m ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliqu</h3>
-        <h4>m ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliqu</h4>
-        <button className="danger">New Invoice</button>    
+        <InvoiceList invoiceList={data}></InvoiceList>
         <span className="tag tag--paid">Pending</span>
       </div>
     </>

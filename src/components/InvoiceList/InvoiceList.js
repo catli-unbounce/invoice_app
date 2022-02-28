@@ -1,6 +1,12 @@
 import React from 'react'
 import styles from "./InvoiceList.module.scss";
-function InvoiceList() {
+function InvoiceList({invoiceList}) {
+
+    const listOfInvoices = invoiceList.map((item) => {
+        return (
+            <p>{item.description}</p>
+        )
+    })
     return (
         <main>
             <div className={styles.header}>
@@ -12,7 +18,11 @@ function InvoiceList() {
                     <div className={[styles["header", styles["header__filter"]]].join()}><span>Filter by Status<img src="/images/icon-arrow-down.svg"></img></span></div>
                     <button className="primary">New Invoice</button>
                 </div>
-            </div>    
+            </div>   
+
+            <div>
+                {listOfInvoices}
+            </div> 
         </main>
     )
 }
