@@ -1,0 +1,31 @@
+@import "../styles/variables";
+main {
+    margin-top: 6rem;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3rem;
+        
+        p {
+            color: $grey-2;
+        }
+
+        &__filter {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+
+            span {
+                cursor: pointer;
+            }
+            img {
+                margin-left: 1rem;
+            }
+
+            button {
+                margin-left: 2rem;
+            }
+        }
+    }
+}

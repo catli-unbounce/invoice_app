@@ -1,10 +1,13 @@
-import logo from './logo.svg';
+
 import styles from './App.scss';
+import InvoiceList from './components/InvoiceList';
+
 function App() {
   return (
     <>
       <div className="vertical-nav"></div>
       <div className="global-width">
+        <InvoiceList></InvoiceList>
         <img src="/images/icon-check.svg" alt="image" />
         <h1>m ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliqu</h1>
         <h2>m ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliqu</h2>
