@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+
+.invoice {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2.5rem;
+  align-items: center;
+  box-shadow: $box-shadow;
+  margin: 2rem 0;
+  background-color: white;
+  border-radius: 5px;
+  border: solid 1px transparent;
+
+  span {
+    flex: 17% 0 0;
+  }
+
+  &__arrow-icon {
+    text-align: left;
+    flex: 17% 0 0;
+  }
+
+  &__id,
+  &__total {
+    font-weight: 800;
+  }
+
+  &__date,
+  &__name {
+    color: $grey-2;
+    font-size: 1.3rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border: solid $lilac-1 1px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 750px) {
+  .invoice {
+    position: relative;
+
+    &__name {
+      position: absolute;
+      top: 3rem;
+      right: 2.5rem;
+    }
+  }
+}
